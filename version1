@@ -1,0 +1,25 @@
+print("MATH GAME")
+print()
+print("Name a a number between 1 and 10 and I will quiz you on the multiplication table of that number.")
+print()
+
+multiple = int(input("Name your multiple: "))
+print()
+
+counter = 0
+for i in range(1,11):
+  
+  print(i, "x", multiple, "=")
+  print()
+  anwser = int(input(""))
+  if anwser == i * multiple:
+    print("\033[32mGreat work!\033[0m")
+    counter += 1
+  
+  elif anwser != i * multiple:
+    print("\033[31mNope. The answer was\033[0m", i * multiple)  
+  if counter == 10:
+    print("\033[32mWow! A perfect score!\033[0m🥳🥳🥳")
+    
+
+print("\033[34mYou scored\033[0m",counter, "\033[34mout of\033[0m 10.")
